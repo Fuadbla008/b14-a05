@@ -1,4 +1,4 @@
-interface Itype {
+export interface Itype {
     id: string,
     name: string,
     category: string,

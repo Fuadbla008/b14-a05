@@ -3,18 +3,35 @@ import './App.css'
 import Footer from './component/Footer';
 import HeroSec from './component/HeroSec';
 import Navber from './component/Navber';
+import '../src/type'
+import type { Itype } from '../src/type';
+import DetailsCard from './component/Card';
 
-const fetchdata = async() =>{
+
+const fetchdata = async (): Promise<Itype[]> => {
   const res = await fetch('/data.json')
   const data = await res.json();
   return data;
 }
 const stateData = fetchdata();
 
-const Stack = () =>{
+const Stack = () => {
   const stackName = use(stateData);
-  const getStack = stackName.length;
-  return console.log(getStack);
+
+  return (
+    <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-3 col-span-3 gap-4">
+        {
+          stackName.map((data: Itype) => (
+            <DetailsCard key={data.id} item={data}></DetailsCard>
+          ))
+        }
+      </div>
+      <div className="grid col-span-1">
+
+      </div>
+    </div>
+  )
 }
 
 function App() {
