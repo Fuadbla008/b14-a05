@@ -28,7 +28,10 @@ const Stack = () => {
         }
       </div>
       <div className="grid col-span-1">
-
+        <div>
+          <h3>Your Stock</h3>
+          <p>No technologies selected yet</p>
+        </div>
       </div>
     </div>
   )
