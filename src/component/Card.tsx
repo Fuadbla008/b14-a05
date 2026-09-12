@@ -2,9 +2,11 @@ import type { Itype } from '../type';
 
 interface Data {
     item: Itype;
+    onAdd: () => void;
+    disabled: boolean;
 }
 
-const DetailsCard = ({ item }: Data) => {
+const DetailsCard = ({ item, onAdd, disabled }: Data) => {
     const { name, category, description, icon, rating, difficulty, badge } = item;
 
     return (
@@ -40,8 +42,16 @@ const DetailsCard = ({ item }: Data) => {
                 </div>
             </div>
 
-            <button className="w-full bg-[#111827] text-white py-2.5 rounded-lg font-medium text-[14px] hover:bg-gray-800 transition-colors duration-200 cursor-pointer">
-                Add to Stack
+            <button
+                onClick={onAdd}
+                disabled={disabled}
+                className={`w-full py-2.5 rounded-lg font-medium text-[14px] transition-colors duration-200 ${
+                    disabled
+                        ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        : 'bg-[#111827] text-white hover:bg-gray-800 cursor-pointer'
+                }`}
+            >
+                {disabled ? 'Already Added' : 'Add to Stack'}
             </button>
 
         </div>
