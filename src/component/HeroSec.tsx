@@ -12,8 +12,7 @@ const HeroSec = () => {
                             Build Your Ideal
                         </h1>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight 
-                            bg-gradient-to-r from-orange-500 via-purple-500 to-pink-500 
-                            bg-clip-text text-transparent">
+                            hero-gradient-text">
                             Development Stack
                         </h1>
                     </div>
@@ -24,7 +23,7 @@ const HeroSec = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-2">
-                        <button className="btn border-none px-6 bg-gradient-to-r from-orange-400 to-red-500 text-white">
+                        <button className="btn border-none px-6 btn-bg-gradient text-white">
                             Explore Technologies
                         </button>
                         <button className="btn px-6">

@@ -51,7 +51,7 @@ const DetailsCard = ({ item, onAdd, disabled }: Data) => {
                         : 'bg-[#111827] text-white hover:bg-gray-800 cursor-pointer'
                 }`}
             >
-                {disabled ? 'Already Added' : 'Add to Stack'}
+                {disabled ? '✓ Added to Stack' : 'Add to Stack'}
             </button>
 
         </div>

@@ -6,3 +6,41 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+
+
+:root {
+  --btn-bg: #3b82f6;
+  --btn-bg-hover: #1d4ed8;
+  --btn-color: #ffffff;
+  --color-start: #ff6b35;
+  --color-middle: #9b5de5;
+  --color-end: #ff1ba4;
+  --bg-gradient: linear-gradient(to right, var(--color-start), var(--color-middle), var(--color-end));
+  --btn-bg-gradient: linear-gradient(to right, var(--color-start),var(--color-end));
+  --text-main: #ff6800;
+  --border-color: #9e9ea0;
+}
+
+.navbutton{
+  color: var(--text-main);
+}
+
+.herohbg{
+  background-color: var(--bg-gradient);
+}
+
+.hero-gradient-text {
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.btn-bg-gradient{
+  background: var(--btn-bg-gradient);
+}
+
+.btn-bg{
+  background: var(--color-start);
+}
