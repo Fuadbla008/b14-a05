@@ -13,8 +13,8 @@
   --btn-bg-hover: #1d4ed8;
   --btn-color: #ffffff;
   --color-start: #ff6b35;
-  --color-middle: #9b5de5;
-  --color-end: #ff1ba4;
+  --color-middle: #ff1fce;
+  --color-end: #b547ff;
   --bg-gradient: linear-gradient(to right, var(--color-start), var(--color-middle), var(--color-end));
   --btn-bg-gradient: linear-gradient(to right, var(--color-start),var(--color-end));
   --text-main: #ff6800;
