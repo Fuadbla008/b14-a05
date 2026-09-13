@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="">
+            <div className="pb-10">
                 <hr className="text-gray-300 pb-10"/>
                 <div className="flex justify-between">
                     <ul><a href="#">© 2026 Dev Stack. All rights reserved.</a></ul>
