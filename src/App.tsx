@@ -32,8 +32,8 @@ const Stack = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-5">
-      <div className="grid grid-cols-3 col-span-3 gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 col-span-1 lg:grid-cols-3 lg: col-span-3 gap-4">
         {
           stackName.map((data: Itype) => (
             <DetailsCard

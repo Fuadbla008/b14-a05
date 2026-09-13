@@ -3,8 +3,8 @@ import Logo from '../../assets/logo-text.png'
 const Footer = () => {
     return (
         <div className="flex flex-col justify-between gap-10">
-            <div className="grid grid-cols-5">
-                <div className="col-span-2 gap-7 grid justify-between">
+            <div className="grid grid-cols-1 lg:grid-cols-5">
+                <div className="col-span-1 lg:col-span-2 gap-7 grid justify-between">
                     <img src={Logo} alt="" />
 
                     <p>Curated tools, technologies, and resources for developers building
