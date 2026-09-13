@@ -1,8 +1,11 @@
 import Logo from '../../assets/logo-text.png'
+import Github from '../../assets/GitHub.png'
+import Linkedin from '../../assets/LinkedIn.png'
+import Twitter from '../../assets/Twitter.png'
 
 const Footer = () => {
     return (
-        <div className="flex flex-col justify-between gap-10">
+        <div className="flex flex-col justify-between gap-10 pt-10">
             <div className="grid grid-cols-1 lg:grid-cols-5">
                 <div className="col-span-1 lg:col-span-2 gap-7 grid justify-between">
                     <img src={Logo} alt="" />
@@ -11,9 +14,9 @@ const Footer = () => {
                         modern software.</p>
 
                     <div className="flex gap-3">
-                        <ul><a href="#">GitHub</a></ul>
-                        <ul><a href="#">Twitter</a></ul>
-                        <ul><a href="#">Linkedin</a></ul>
+                        <ul><a href="#"><img src={Github} alt="" width={40}/></a></ul>
+                        <ul><a href="#"><img src={Linkedin} alt="" width={40}/></a></ul>
+                        <ul><a href="#"><img src={Twitter} alt="" width={40}/></a></ul>
                     </div>
                 </div>
 
