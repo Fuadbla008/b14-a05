@@ -27,6 +27,10 @@ const Stack = () => {
     }
   };
 
+  const handleRemove = (id: string) => {
+    setSelected((prev) => prev.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="grid grid-cols-4 gap-5">
       <div className="grid grid-cols-3 col-span-3 gap-4">
@@ -51,12 +55,35 @@ const Stack = () => {
           ) : (
             <div className="flex flex-col gap-3">
               {selected.map((item) => (
-                <div key={item.id} className="flex items-center gap-3 border border-gray-200 rounded-xl p-3">
-                  <img src={item.icon} alt={item.name} className="w-9 h-9" />
-                  <div>
-                    <h4 className="text-[15px] font-semibold text-gray-900">{item.name}</h4>
-                    <span className="text-gray-400 text-[12px]">{item.category}</span>
+                <div
+                  key={item.id}
+                  className="flex items-center justify-between border border-gray-200 rounded-xl p-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <img src={item.icon} alt={item.name} className="w-9 h-9" />
+                    <div>
+                      <h4 className="text-[15px] font-semibold text-gray-900 leading-tight">
+                        {item.name}
+                      </h4>
+                      <span className="text-gray-400 text-[12px]">{item.category}</span>
+                    </div>
                   </div>
+
+                  <button
+                    onClick={() => handleRemove(item.id)}
+                    className="text-gray-400 hover:text-red-500 transition-colors duration-200 cursor-pointer"
+                    aria-label={`Remove ${item.name}`}
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
               ))}
             </div>
