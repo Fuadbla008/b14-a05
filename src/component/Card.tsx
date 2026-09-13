@@ -44,7 +44,6 @@ const DetailsCard = ({ item, onAdd, disabled }: Data) => {
 
             <button
                 onClick={onAdd}
-                disabled={disabled}
                 className={`w-full py-2.5 rounded-lg font-medium text-[14px] transition-colors duration-200 ${
                     disabled
                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed'

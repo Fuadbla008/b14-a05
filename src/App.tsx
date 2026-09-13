@@ -24,10 +24,12 @@ const Stack = () => {
   const isSelected = (id: string) => selected.some((item) => item.id === id);
 
   const handleAdd = (item: Itype) => {
-    if (!isSelected(item.id)) {
-      setSelected((prev) => [...prev, item]);
-      toast.success(`${item.name} added to stack!`);
+    if (isSelected(item.id)) {
+      toast.warning(`${item.name} is already in your stack!`);
+      return;
     }
+    setSelected((prev) => [...prev, item]);
+    toast.success(`${item.name} added to stack!`);
   };
 
   const handleRemove = (id: string) => {
