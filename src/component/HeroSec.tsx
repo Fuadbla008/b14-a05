@@ -23,7 +23,7 @@ const HeroSec = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-2">
-                        <button className="btn border-none px-6 btn-bg-gradient text-white">
+                        <button className="btn border-none px-6 bg-gradient-to-r from-orange-400 to-red-500 text-white">
                             Explore Technologies
                         </button>
                         <button className="btn px-6">
